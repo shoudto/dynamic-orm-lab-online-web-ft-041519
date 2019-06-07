@@ -9,6 +9,7 @@ class InteractiveRecord
   
   def self.column_names
     DB[:conn].results_as_hash = true 
+<<<<<<< HEAD
     
     sql = "pragma table_info('#{table_name}')"
     
@@ -34,4 +35,9 @@ class InteractiveRecord
   def col_names_for_insert
     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
   end 
+=======
+    binding.pry 
+  end 
+  
+>>>>>>> a45fabc3422cd7706bbba460486659110bc20479
 end
